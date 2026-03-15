@@ -1,120 +1,121 @@
-# Single-Point Metaheuristic Algorithms for NP-Hard Problems
-## Overview
+# Single-Point Metaheuristic Search Algorithms for NP-Hard Optimization Problems
+## Project Overview
 
-This project explores the application of **single-point metaheuristic optimization algorithms** to solve classical **NP-hard combinatorial optimization problems.** The goal of the study was to evaluate how different local-search based algorithms perform when solving computationally difficult optimization tasks.
+This project explores the application of **single-point metaheuristic search algorithms** to solve **NP-hard combinatorial optimization problems.** The study focuses on analyzing the effectiveness of several metaheuristic algorithms in solving classical optimization problems and evaluating their performance in terms of **solution quality, convergence behavior, and computational efficiency.**
 
-The project focuses on analyzing the effectiveness of several **single-solution search algorithms** and comparing their performance in terms of **solution quality, convergence behavior, and computational efficiency.**
+This team project was conducted as part of the **Introduction to Metaheuristics** course and implemented using **Python in Google Colab.**
 
-The implementation and experiments were conducted using **Python in Google Colab.**
+Two well-known NP-hard problems were studied:
 
-## Problems Studied
-### 1. Knapsack Problem
+- **Partition Problem**
 
-The Knapsack Problem is a well-known combinatorial optimization problem where the objective is to select a subset of items with given weights and values in order to maximize the total value while keeping the total weight within a specified capacity.
+- **Knapsack Problem**
 
-Because the number of possible item combinations grows exponentially with the number of items, the problem becomes computationally difficult for large instances.
-
-### 2. Partition Problem
-
-The Partition Problem involves dividing a set of integers into two subsets such that the difference between their sums is minimized.
-
-This problem is also classified as NP-hard, making exact solutions impractical for larger datasets and motivating the use of metaheuristic optimization algorithms.
+Several metaheuristic search algorithms were implemented and experimentally evaluated to understand their behavior and performance on these problems.
 
 ## Algorithms Implemented
 
-The project focuses on single-point search algorithms, which iteratively improve a single candidate solution rather than maintaining a population of solutions.
+The following single-point metaheuristic search algorithms were applied:
 
-The following algorithms were implemented and evaluated:
+- Tabu Search (TS)
 
-### Tabu Search (TS)
+- Simulated Annealing (SA)
 
-Tabu Search uses a memory-based approach to avoid revisiting previously explored solutions. A tabu list prevents the search from cycling and helps escape local optima.
+- Iterated Local Search (ILS)
 
-### Simulated Annealing (SA)
+- Guided Local Search (GLS)
 
-Simulated Annealing is inspired by the annealing process in metallurgy. The algorithm probabilistically accepts worse solutions during early iterations to escape local optima and gradually focuses on better solutions.
+These algorithms were used to explore the solution space efficiently and identify near-optimal solutions for the optimization problems.
 
-### Iterated Local Search (ILS)
+## Problems Studied
+### Partition Problem
 
-Iterated Local Search repeatedly applies local search while introducing perturbations to the current solution to explore new regions of the search space.
+The Partition Problem involves dividing a set of integers into two subsets such that the difference between the sums of the subsets is minimized.
 
-### Guided Local Search (GLS)
+This problem is widely studied in combinatorial optimization and serves as a benchmark for evaluating search algorithms.
 
-Guided Local Search introduces penalties to frequently used solution features to guide the search toward unexplored areas of the solution space.
+### Knapsack Problem
 
-## Hyperparameter Optimization
+The **Knapsack Problem** involves selecting items with given weights and values to maximize total value while keeping the total weight within a given capacity.
 
-To improve algorithm performance, hyperparameter optimization was performed using the Optuna framework.
+It is one of the most widely studied **NP-hard optimization problems** in computer science and operations research.
 
-The optimization process was used to tune parameters such as:
+## My Contributions
 
-- cooling schedule parameters in Simulated Annealing
+This project was conducted as a three-member team project, where I played a key role in both the technical and coordination aspects of the work.
 
-- tabu list size in Tabu Search
+My contributions included:
 
-- perturbation strength in Iterated Local Search
+- Leading and coordinating the project, organizing tasks and ensuring collaboration among team members.
 
-- penalty control parameters in Guided Local Search
+- Conducting hyperparameter optimization for the algorithms applied to the Partition Problem.
 
-This allowed the algorithms to achieve improved solution quality across multiple test instances.
+- Researching how algorithm parameters influence performance and solution quality.
 
-## Experiments and Evaluation
+- Designing and performing experiments to evaluate how parameter tuning improves algorithm behavior.
 
-The algorithms were evaluated through experiments on generated problem instances. Performance was analyzed based on several factors:
+- Analyzing the impact of parameter settings on solution quality and convergence performance.
 
-- quality of the final solution
+Hyperparameter optimization was additional work beyond the course requirements, carried out to further investigate how tuning algorithm parameters can improve optimization results.
 
-- convergence behavior of the algorithms
+## Experimental Analysis
 
-- computational efficiency
+The project involved evaluating algorithm performance using several criteria, including:
 
-The results demonstrate how different metaheuristic strategies perform when applied to complex optimization problems.
+- Solution quality
+
+- Convergence behavior
+
+- Exploration vs exploitation balance
+
+- Computational efficiency
+
+The experiments helped illustrate how different metaheuristic algorithms explore the solution space and how parameter tuning affects their performance.
 
 ## Technologies Used
 
-**Programming Language**
-- Python
+- **Python**
 
-**Libraries and Tools**
-- Optuna (Hyperparameter Optimization)
-- Google Colab
+- **Google Colab**
 
-**Concepts and Methods**
-- Metaheuristic Optimization
-- Single-Point Search Algorithms
-- Combinatorial Optimization
-- Algorithm Performance Analysis
+- Metaheuristic optimization algorithms
 
-## Running the Project
-
-This project was developed and executed using Google Colab.
-
-To run the notebook:
-
-1. Open the .ipynb file in Google Colab.
-
-2. Run the notebook cells sequentially to reproduce the experiments and results.
+- Algorithm performance analysis
 
 ## Learning Outcomes
 
-Through this project, the following concepts were explored:
+Through this project, the following concepts were explored and applied:
 
-- application of metaheuristic algorithms to NP-hard problems
+- Metaheuristic optimization techniques
 
-- comparison of different single-point search strategies
+- Search space exploration strategies
 
-- hyperparameter optimization using Optuna
+- Trade-offs between exploration and exploitation
 
-- analysis of algorithm convergence behavior
+- Hyperparameter optimization for search algorithms
 
-## Future Improvements
+- Experimental analysis of optimization algorithms
 
-Possible future improvements include:
+## Team Members
 
-- applying the algorithms to additional NP-hard problems
+- Tithira Withanaarachchi — Project Leader, Coordination, Hyperparameter Optimization(Partition Problem), Algorithm analysis by implementing graphs.
 
-- comparing single-point search algorithms with population-based methods such as Genetic Algorithms and Ant Colony Optimization
+- Minnah Aamir — Algorithm Implementation and Analysis (Knapsack Problem).
 
-- extending the experiments to larger datasets
+- Kohei Kuwana — Algorithm Implementation and Testing (Partition Problem).
 
-- developing visualization tools for algorithm convergence behavior
+## Repository Contents
+
+The repository contains:
+
+- Implementation of metaheuristic algorithms
+
+- Experimental evaluation code
+
+- Results and analysis
+
+- Project report
+
+## Note
+
+This project was implemented and executed using Google Colab, so the code can be easily run within the notebook environment without requiring complex local setup.
