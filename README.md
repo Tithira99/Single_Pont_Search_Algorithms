@@ -1,1 +1,1 @@
-Single Point Search Algorithms such as Tabu Search, Local Search, Iterative Local Search and Simulated Anealing were applied for 2 NP hard problems namely Partition Problem and Knapsack Problem.
+Single Point Search Algorithms such as Tabu Search, Simulated Annealing, Iterative Local Search and Guided Local Search were applied for 2 NP hard problems namely Partition Problem and Knapsack Problem.
